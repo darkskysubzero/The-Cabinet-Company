@@ -9,6 +9,7 @@
 
 // ========COLORS=============
 $primary-blue : #000D28;
+$secondary-blue: #001747;
 $solid-white : #fff;
 $solid-gold : #CC9933;
 $dark-grey : #0E0E0E;
@@ -44,6 +45,30 @@ $transition-slow : all 0.7s ease-out;
     justify-content: center;
     align-items: center;
     transition: $transition;
+    cursor: pointer;
+
+    &:hover {
+        background: $solid-white;
+        color: $solid-gold;
+    }
+}
+
+.blue-button {
+    background: $secondary-blue;
+    color: $solid-white;
+    height: 54px;
+    width: 191px;
+    font-family: $font;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14.371px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition;
+    cursor: pointer;
+    border: none;
 
     &:hover {
         background: $solid-white;
@@ -177,7 +202,7 @@ $transition-slow : all 0.7s ease-out;
     left: 0;
     height: 100%;
     width: 400px;
-    z-index: 2;
+    z-index: 20;
     color: $solid-white;
     padding: 2rem;
     flex-direction: column;
@@ -274,7 +299,6 @@ $transition-slow : all 0.7s ease-out;
     }
 
 }
-
 
 // ==========HERO=============
 .hero {
@@ -548,4 +572,88 @@ $transition-slow : all 0.7s ease-out;
 // ========WHAT WE DO=========
 .whatwedo {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .w-projects {
+        padding: 1.5rem;
+        display: flex;
+        min-height: 65%;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        .project {
+            width: 390px;
+            min-height: 531px;
+            background: $primary-blue;
+            color: $solid-white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.2rem;
+            padding-bottom: 2rem;
+
+            .p-image {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .p-title {
+                font-family: $font;
+                font-size: 2.5rem;
+                font-weight: 400;
+                text-align: center;
+                word-wrap: break-word;
+                padding: 0 1rem;
+            }
+
+            .p-desc {
+                font-family: $font2;
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 0 2rem;
+                margin-bottom: 1.2rem
+            }
+
+            .p-button {
+                width: 90%;
+
+                .blue-button {
+                    font-size: 1.25rem;
+                    width: 100%;
+                    font-weight: 400;
+
+                    &:hover {
+                        background: $solid-gold;
+                        color: $solid-white;
+                    }
+                }
+
+            }
+
+        }
+
+        @media screen and (max-width:768px) {
+            & {
+                flex-direction: column;
+
+                .project {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+
+    .w-text {
+        border: 1px solid red;
+    }
+
+
 }

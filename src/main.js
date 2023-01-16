@@ -2,8 +2,6 @@
 import 'normalize.css';
 import './swiper-bundle.min.css'
 import './swiper-bundle.min';
-import './style.scss';
-
 
 
 // =================SIDEBAR & MENU=====================
@@ -12,10 +10,12 @@ const sidebar_menu = document.querySelector(".sidebar");
 const sidebar_close = document.querySelector(".sidebar-close");
 
 show_menu.addEventListener("click", () => {
-    sidebar_menu.classList.toggle("active");
+    sidebar_menu.classList.add("active");
+    document.querySelector("body").style.overflow = "hidden";
 });
 sidebar_close.addEventListener("click", () => {
-    sidebar_menu.classList.toggle("active");
+    sidebar_menu.classList.remove("active");
+    document.querySelector("body").style.overflow = "auto";
 })
 
 

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "style": "sass src/style.scss src/style.css --watch"
   },
   "devDependencies": {
     "normalize.css": "^8.0.1",
