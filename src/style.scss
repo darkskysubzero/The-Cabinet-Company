@@ -372,10 +372,42 @@ $transition-slow : all 0.7s ease-out;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
-
     position: relative;
+
+
+    #symbol {
+        position: absolute;
+        top: 20%;
+        left: 15%;
+        transition: $transition;
+
+        @media screen and (max-width:1024px) {
+            left: 15%;
+
+            img {
+                width: 70px;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            left: 15%;
+            top: 30%;
+
+            img {
+                width: 60px;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            left: 10%;
+            top: 30%;
+
+            img {
+                width: 50px;
+            }
+        }
+    }
+
 
     .contain {
         //Relative for arrows
@@ -498,6 +530,7 @@ $transition-slow : all 0.7s ease-out;
     }
 
 
+
     // Relative to quotes container
     #paginationdots {
         bottom: 20px;
@@ -507,4 +540,12 @@ $transition-slow : all 0.7s ease-out;
     .swiper-pagination-bullet {
         background: rgb(255, 255, 255);
     }
+}
+
+
+
+
+// ========WHAT WE DO=========
+.whatwedo {
+    min-height: 100vh;
 }
