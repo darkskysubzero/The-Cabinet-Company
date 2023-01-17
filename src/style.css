@@ -559,13 +559,13 @@
 }
 .services .contain .services-tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(327px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.25rem;
 }
 .services .contain .services-tiles .tile {
   user-select: none;
   background: #fff;
-  min-width: 327px;
+  min-width: 100%;
   height: 327px;
   display: flex;
   flex-direction: column;
@@ -586,6 +586,26 @@
 }
 .services .contain .services-tiles .tile:hover img {
   filter: invert(100%);
+}
+.services .contain .services-tiles .tile:active {
+  background: #CC9933;
+  color: #fff;
+}
+.services .contain .services-tiles .tile:active img {
+  filter: invert(100%);
+}
+@media screen and (max-width: 500px) {
+  .services .contain {
+    padding: 2rem;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .services .contain {
+    overflow: hidden;
+    max-width: 100%;
+    padding: 0;
+  }
 }
 @media screen and (max-width: 768px) {
   .services {
@@ -656,6 +676,12 @@
   .history .history-image {
     width: 100%;
     height: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .history .history-text {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -878,6 +904,12 @@ footer .contain .footer-credits p:last-child span {
   footer .contain {
     margin-top: 0rem;
   }
+}
+
+.app,
+.container {
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -724,13 +724,13 @@ $transition-slow : all 0.7s ease-out;
 
         .services-tiles {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(327px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.25rem;
 
             .tile {
                 user-select: none;
                 background: $solid-white;
-                min-width: 327px;
+                min-width: 100%;
                 height: 327px;
                 display: flex;
                 flex-direction: column;
@@ -754,9 +754,35 @@ $transition-slow : all 0.7s ease-out;
                         filter: invert(100%);
                     }
                 }
+
+                &:active {
+                    background: $solid-gold;
+                    color: $solid-white;
+
+                    img {
+                        filter: invert(100%);
+                    }
+                }
             }
 
 
+
+        }
+
+
+        @media screen and (max-width:500px) {
+            & {
+                padding: 2rem;
+                max-width: 100%;
+            }
+        }
+
+        @media screen and (max-width:380px) {
+            & {
+                overflow: hidden;
+                max-width: 100%;
+                padding: 0;
+            }
         }
     }
 
@@ -855,6 +881,15 @@ $transition-slow : all 0.7s ease-out;
                 height: 100%;
             }
 
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        & {
+            .history-text {
+                width: 100%;
+                text-align: center;
+            }
         }
     }
 }
@@ -1155,4 +1190,11 @@ footer {
 
     }
 
+}
+
+
+.app,
+.container {
+    margin: 0;
+    padding: 0;
 }
