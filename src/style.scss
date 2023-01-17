@@ -574,6 +574,8 @@ $transition-slow : all 0.7s ease-out;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
 
     .w-projects {
         padding: 1.5rem;
@@ -605,6 +607,7 @@ $transition-slow : all 0.7s ease-out;
             }
 
             .p-title {
+                user-select: none;
                 font-family: $font;
                 font-size: 2.5rem;
                 font-weight: 400;
@@ -614,6 +617,7 @@ $transition-slow : all 0.7s ease-out;
             }
 
             .p-desc {
+                user-select: none;
                 font-family: $font2;
                 text-align: center;
                 font-size: 1.5rem;
@@ -652,8 +656,116 @@ $transition-slow : all 0.7s ease-out;
     }
 
     .w-text {
-        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3.5rem;
+        user-select: none;
+
+        .w-line {
+            margin-top: 3.5rem;
+            width: 60px;
+            height: 0px;
+            border: 2px solid $secondary-blue;
+            border-radius: 50px;
+            user-select: none;
+        }
+
+        .w-text {
+            p {
+                user-select: none;
+                font-size: 2.8rem;
+                font-family: $font;
+                text-transform: uppercase;
+                text-align: center;
+                max-width: 900px;
+                font-weight: 500;
+                padding: 0 2rem;
+
+                span {
+                    display: block;
+                    font-weight: 700;
+                    color: $solid-gold;
+                }
+
+            }
+        }
+
+
     }
 
 
+}
+
+
+
+
+
+// ========SERVICES============
+.services {
+    min-height: 50vh;
+    background-color: $primary-blue;
+    padding-bottom: 8rem;
+
+    .contain {
+        display: flex;
+        flex-direction: column;
+
+        .services-title {
+            color: $solid-white;
+            text-align: center;
+            padding: 3rem;
+            font-size: 2.25rem;
+            font-weight: 500;
+            font-family: $font;
+            text-transform: uppercase;
+        }
+
+        .services-tiles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(327px, 1fr));
+            gap: 1.25rem;
+
+            .tile {
+                background: $solid-white;
+                min-width: 327px;
+                height: 327px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                transition: $transition;
+                cursor: pointer;
+
+                p {
+                    font-size: 2.25rem;
+                    font-family: $font;
+                    font-weight: 400;
+                }
+
+                &:hover {
+                    background: $solid-gold;
+                    color: $solid-white;
+
+                    img {
+                        filter: invert(100%);
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        & {
+            .contain .services-tiles {
+                gap: 5rem;
+            }
+
+            padding-bottom: 5rem;
+        }
+    }
 }

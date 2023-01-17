@@ -10,12 +10,10 @@ const sidebar_menu = document.querySelector(".sidebar");
 const sidebar_close = document.querySelector(".sidebar-close");
 
 show_menu.addEventListener("click", () => {
-    sidebar_menu.classList.add("active");
-    document.querySelector("body").style.overflow = "hidden";
+    sidebar_menu.classList.toggle("active");
 });
 sidebar_close.addEventListener("click", () => {
     sidebar_menu.classList.remove("active");
-    document.querySelector("body").style.overflow = "auto";
 })
 
 
@@ -29,6 +27,11 @@ const row1 = new Swiper(".row-1", {
 
     slidesOffsetBefore: 0,
     breakpoints: {
+        200: {
+            direction: 'vertical',
+            slidesPerView: 3,
+            slidesOffsetBefore: 0,
+        },
         500: {
             direction: 'vertical',
             slidesPerView: 3,
@@ -60,6 +63,11 @@ const row2 = new Swiper(".row-2", {
     freeMode: true,
     loop: true,
     breakpoints: {
+        200: {
+            direction: 'vertical',
+            slidesPerView: 3,
+            slidesOffsetBefore: 0,
+        },
         500: {
             direction: 'vertical',
             slidesPerView: 3,
