@@ -269,6 +269,12 @@
     font-size: 8.5vw;
   }
 }
+@media screen and (max-width: 380px) {
+  .hero .hero-title .text h1 {
+    padding: 0;
+    font-size: 6vw;
+  }
+}
 .hero .hero-images {
   overflow-x: hidden;
   display: flex;
@@ -906,10 +912,12 @@ footer .contain .footer-credits p:last-child span {
   }
 }
 
-.app,
-.container {
-  margin: 0;
-  padding: 0;
+@media screen and (max-width: 200px) {
+  .app,
+  .container {
+    border: 1px solid red;
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

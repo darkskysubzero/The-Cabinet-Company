@@ -33,6 +33,8 @@ const row1 = new Swiper(".row-1", {
             direction: 'vertical',
             slidesPerView: 3,
             slidesOffsetBefore: 0,
+            loop: false,
+
         },
         600: {
             direction: 'vertical',
@@ -43,6 +45,7 @@ const row1 = new Swiper(".row-1", {
             direction: 'horizontal',
             slidesPerView: 4,
             slidesOffsetBefore: -360,
+            loop: true,
         },
         1024: {
             direction: 'horizontal',
@@ -68,6 +71,7 @@ const row2 = new Swiper(".row-2", {
         500: {
             direction: 'vertical',
             slidesPerView: 3,
+            loop: false,
         },
         600: {
             direction: 'vertical',
@@ -76,6 +80,7 @@ const row2 = new Swiper(".row-2", {
         769: {
             direction: 'horizontal',
             slidesPerView: 4,
+            loop: false,
         },
         1024: {
             direction: 'horizontal',
