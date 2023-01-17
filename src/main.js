@@ -1,8 +1,5 @@
 
 import 'normalize.css';
-import './swiper-bundle.min.css'
-import './swiper-bundle.min';
-
 
 // =================SIDEBAR & MENU=====================
 const show_menu = document.querySelector(".menu-icon");
